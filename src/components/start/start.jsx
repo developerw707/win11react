@@ -151,13 +151,7 @@ export const StartMenu = () => {
                 </div>
               </div>
               <div className="recApps win11Scroll">
-                <div className="stAcbar">
-                  <div className="gpname">Recommended</div>
-                  <div className="gpbtn none">
-                    <div>More</div>
-                    <Icon fafa="faChevronRight" width={8} />
-                  </div>
-                </div>
+                
                 <div className="reApps">
                   {start.rcApps.slice(0, 6).map((app, i) => {
                     return app.name ? (
