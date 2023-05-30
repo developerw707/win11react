@@ -47,6 +47,20 @@ export const BootScreen = (props) => {
     }
   }, [blackout]);
 
+useEffect(() => {
+    if (props.dir < 0) {
+      if (blackout) {
+        if (wall.act == "restart") {
+          setTimeout(() => {
+            setBlackOut(false);
+            setTimeout(() => {
+              dispatch({ type: "WALLBOOTED" });
+            }, 4000);
+          }, 2000);
+        }
+      }
+    }
+  }, [blackout]);
   return (
     <div className="bootscreen">
       <div className={blackout ? "hidden" : ""}>
